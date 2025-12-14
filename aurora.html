@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>流光花园</title>
+  <link rel="stylesheet" href="aurora.css" />
+</head>
+<body>
+  <div class="ui">
+    <div class="meta">
+      <h1>流光花园</h1>
+      <p>丝带般的光羽在你的指尖流转，点击洒下涟漪。</p>
+    </div>
+    <div class="controls">
+      <label>
+        流动感
+        <input id="flow" type="range" min="4" max="18" value="10" />
+      </label>
+      <label>
+        光羽数量
+        <input id="count" type="range" min="80" max="260" value="160" />
+      </label>
+      <button id="paletteBtn" type="button">切换色盘</button>
+      <label class="toggle">
+        <input id="trails" type="checkbox" checked />
+        <span>开启尾迹</span>
+      </label>
+    </div>
+  </div>
+  <canvas id="garden"></canvas>
+  <script src="aurora.js"></script>
+</body>
+</html>
