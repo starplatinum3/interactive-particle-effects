@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lotus Echo · 灵波莲境</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="grain"></div>
+  <canvas id="scene"></canvas>
+
+  <div class="panel">
+    <div class="panel__header">
+      <div>
+        <p class="eyebrow">LOTUS ECHO</p>
+        <h1>灵波莲境</h1>
+      </div>
+      <div class="badges">
+        <span class="badge">新</span>
+        <span class="badge badge--soft">涟漪 &amp; 光羽</span>
+      </div>
+    </div>
+    <p class="panel__desc">轻盈的莲光在夜色中漂浮，指尖涟漪与色彩切换让每一次波动都充满生机。</p>
+
+    <div class="controls">
+      <label class="control">
+        <div class="label">
+          <span>莲光数量</span>
+          <span class="value" id="countLabel">220</span>
+        </div>
+        <input type="range" id="count" min="60" max="320" value="220" />
+      </label>
+
+      <label class="control">
+        <div class="label">
+          <span>漂移</span>
+          <span class="value" id="driftLabel">0.55</span>
+        </div>
+        <input type="range" id="drift" min="0.05" max="1.2" step="0.05" value="0.55" />
+      </label>
+
+      <label class="control">
+        <div class="label">
+          <span>绽放</span>
+          <span class="value" id="bloomLabel">2.0</span>
+        </div>
+        <input type="range" id="bloom" min="1" max="3.5" step="0.1" value="2" />
+      </label>
+
+      <label class="control">
+        <div class="label">
+          <span>涡流</span>
+          <span class="value" id="turbulenceLabel">1.15</span>
+        </div>
+        <input type="range" id="turbulence" min="0" max="2" step="0.05" value="1.15" />
+      </label>
+
+      <div class="control control--row">
+        <span>色盘</span>
+        <div class="chip-group" id="paletteGroup">
+          <button class="chip chip--active" data-palette="mist">雾光</button>
+          <button class="chip" data-palette="dusk">暮耀</button>
+          <button class="chip" data-palette="coral">珊瑚</button>
+        </div>
+      </div>
+
+      <div class="control control--row">
+        <span>特效</span>
+        <label class="toggle">
+          <input type="checkbox" id="glow" checked />
+          <span class="track"></span>
+          <span class="thumb">柔光</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="trails" checked />
+          <span class="track"></span>
+          <span class="thumb">拖尾</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="pulse" checked />
+          <span class="track"></span>
+          <span class="thumb">心跳</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="hint">
+    <p>移动指针牵引莲光 | 点击 / 空格生成涟漪</p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
