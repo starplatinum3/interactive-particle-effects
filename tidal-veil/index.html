@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>镜潮之湾 | Tidal Veil</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <section class="panel glass">
+    <div class="header">
+      <div>
+        <p class="eyebrow">沉浸体验</p>
+        <h1>镜潮之湾</h1>
+        <p class="subtitle">指尖牵引光羽丝带，波纹与微光在夜色中缓缓流动。</p>
+      </div>
+      <button id="pulse" class="pill">手动涟漪</button>
+    </div>
+    <div class="grid">
+      <label class="control">
+        <div class="row">
+          <span>光羽数量</span>
+          <span class="value" id="countValue">160</span>
+        </div>
+        <input type="range" id="count" min="80" max="420" step="10" value="160" />
+      </label>
+      <label class="control">
+        <div class="row">
+          <span>流速</span>
+          <span class="value" id="speedValue">0.70</span>
+        </div>
+        <input type="range" id="speed" min="0.2" max="1.6" step="0.02" value="0.7" />
+      </label>
+      <label class="control">
+        <div class="row">
+          <span>涟漪跨度</span>
+          <span class="value" id="rippleValue">160</span>
+        </div>
+        <input type="range" id="ripple" min="80" max="260" step="5" value="160" />
+      </label>
+      <div class="control palette">
+        <div class="row">
+          <span>色盘</span>
+          <div class="chips">
+            <button class="chip active" data-palette="tide">潮汐</button>
+            <button class="chip" data-palette="neon">霓虹</button>
+            <button class="chip" data-palette="dusk">暮光</button>
+          </div>
+        </div>
+      </div>
+      <label class="control toggle">
+        <div class="row">
+          <span>柔光</span>
+          <input type="checkbox" id="glow" checked />
+        </div>
+      </label>
+      <label class="control toggle">
+        <div class="row">
+          <span>拖尾</span>
+          <input type="checkbox" id="trail" checked />
+        </div>
+      </label>
+    </div>
+    <p class="hint">移动鼠标牵引丝带，点击或按下空格激起圆环；久留可观察缓慢呼吸的微光。</p>
+  </section>
+  <script src="main.js"></script>
+</body>
+</html>
