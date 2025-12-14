@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prism Orbit · 光晕花园</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="grain"></div>
+  <canvas id="scene"></canvas>
+
+  <div class="panel">
+    <div class="panel__header">
+      <div>
+        <p class="eyebrow">PRISM ORBIT</p>
+        <h1>光晕花园</h1>
+      </div>
+      <div class="badges">
+        <span class="badge">新</span>
+        <span class="badge badge--soft">环绕 &amp; 涟漪</span>
+      </div>
+    </div>
+    <p class="panel__desc">环状光羽围绕核心缓慢盘旋，指针牵引与点击涟漪让色彩在夜幕中流动。</p>
+
+    <div class="controls">
+      <label class="control">
+        <div class="label">
+          <span>光羽层数</span>
+          <span class="value" id="ringCountLabel">7</span>
+        </div>
+        <input type="range" id="ringCount" min="3" max="12" value="7" />
+      </label>
+
+      <label class="control">
+        <div class="label">
+          <span>流动强度</span>
+          <span class="value" id="driftLabel">0.35</span>
+        </div>
+        <input type="range" id="drift" min="0" max="0.8" step="0.05" value="0.35" />
+      </label>
+
+      <label class="control">
+        <div class="label">
+          <span>光晕厚度</span>
+          <span class="value" id="thicknessLabel">1.3</span>
+        </div>
+        <input type="range" id="thickness" min="0.5" max="2.5" step="0.1" value="1.3" />
+      </label>
+
+      <div class="control control--row">
+        <span>色彩</span>
+        <div class="chip-group" id="paletteGroup">
+          <button class="chip chip--active" data-palette="aurora">极光</button>
+          <button class="chip" data-palette="sunrise">晨曦</button>
+          <button class="chip" data-palette="violet">暮光</button>
+        </div>
+      </div>
+
+      <div class="control control--row">
+        <span>特效</span>
+        <label class="toggle">
+          <input type="checkbox" id="pulse" checked />
+          <span class="track"></span>
+          <span class="thumb">脉动</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="spark" checked />
+          <span class="track"></span>
+          <span class="thumb">微光</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="hint">
+    <p>拖动指针牵引环带 | 点击生成光波涟漪</p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

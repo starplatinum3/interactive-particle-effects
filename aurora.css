@@ -1,0 +1,126 @@
+:root {
+  --bg-1: #0a0c1a;
+  --bg-2: #0f1a2f;
+  --glass: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.15);
+  --text: #e9f2ff;
+  --muted: #97a7c4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Inter", "Noto Sans SC", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 20% 20%, rgba(157, 237, 255, 0.08), transparent 32%),
+    radial-gradient(circle at 70% 10%, rgba(255, 176, 255, 0.09), transparent 30%),
+    linear-gradient(140deg, var(--bg-1), var(--bg-2));
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 70%, rgba(60, 130, 255, 0.06), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255, 120, 200, 0.06), transparent 40%),
+    linear-gradient(160deg, #070916 0%, #0e1a34 100%);
+}
+
+.ui {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px clamp(18px, 4vw, 46px);
+  pointer-events: none;
+}
+
+.meta {
+  width: min(760px, 100%);
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  padding: clamp(16px, 3vw, 26px);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.meta h1 {
+  margin: 0;
+  font-size: clamp(28px, 6vw, 46px);
+  letter-spacing: 0.06em;
+}
+
+.meta p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.controls {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.controls label,
+.controls button,
+.controls .toggle {
+  pointer-events: auto;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.16s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.controls label:hover,
+.controls button:hover,
+.controls .toggle:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.controls input[type="range"] {
+  width: 150px;
+  accent-color: #7ae7ff;
+}
+
+button {
+  border: none;
+  background: linear-gradient(120deg, #76d0ff, #f3a9ff);
+  color: #0a0c1a;
+  font-weight: 700;
+}
+
+.toggle input {
+  accent-color: #f3a9ff;
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 720px) {
+  .meta {
+    backdrop-filter: blur(6px);
+  }
+}
