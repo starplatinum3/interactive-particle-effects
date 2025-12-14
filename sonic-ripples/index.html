@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>声波绽放 | Sonic Ripples</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scene">
+    <canvas id="canvas"></canvas>
+    <div class="overlay">
+      <div class="hero">
+        <h1>声波绽放</h1>
+        <p>在音乐的节奏里，光波与涟漪随能量开合。</p>
+      </div>
+      <div class="panel glass">
+        <div class="controls">
+          <label class="file-picker">
+            <input type="file" id="fileInput" accept="audio/*" />
+            <span>选择本地音轨</span>
+          </label>
+          <button id="micBtn">启用麦克风</button>
+          <button id="playPause">播放</button>
+        </div>
+        <div class="sliders">
+          <label>
+            涟漪密度
+            <input type="range" id="density" min="0.3" max="1.5" step="0.1" value="1" />
+          </label>
+          <label>
+            扩散幅度
+            <input type="range" id="spread" min="0.6" max="1.6" step="0.1" value="1" />
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="glow" checked />
+            <span>柔光拖尾</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="autoPalette" checked />
+            <span>循环配色</span>
+          </label>
+        </div>
+        <div class="legend">文件或麦克风任一激活后，声波将驱动光环与粒子的美丽波纹。</div>
+      </div>
+    </div>
+    <audio id="audio" crossorigin="anonymous"></audio>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
