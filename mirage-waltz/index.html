@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirage Waltz · 幻影流舞</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="backdrop"></div>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+  <div class="glow glow-c"></div>
+  <canvas id="scene"></canvas>
+
+  <header class="hero">
+    <div class="eyebrow">Mirage Waltz</div>
+    <div class="title">幻影流舞</div>
+    <p class="subtitle">丝羽、弧光与涟漪在朦胧夜色中错落起伏，随指尖轻盈旋转。</p>
+  </header>
+
+  <section class="panel">
+    <div class="controls">
+      <label class="control">
+        <div class="label">丝羽数量</div>
+        <input id="count" type="range" min="140" max="540" value="320" />
+        <span id="countVal" class="value">320</span>
+      </label>
+      <label class="control">
+        <div class="label">流速</div>
+        <input id="flow" type="range" min="0.4" max="2.4" step="0.1" value="1.2" />
+        <span id="flowVal" class="value">1.2</span>
+      </label>
+      <label class="control">
+        <div class="label">摆动</div>
+        <input id="sway" type="range" min="0" max="2.8" step="0.1" value="1.4" />
+        <span id="swayVal" class="value">1.4</span>
+      </label>
+      <label class="control">
+        <div class="label">律动</div>
+        <input id="pulse" type="range" min="0" max="2.5" step="0.1" value="1.0" />
+        <span id="pulseVal" class="value">1.0</span>
+      </label>
+
+      <label class="toggle">
+        <input id="glow" type="checkbox" checked />
+        <span>柔光</span>
+      </label>
+      <label class="toggle">
+        <input id="trail" type="checkbox" checked />
+        <span>拖尾</span>
+      </label>
+      <label class="toggle">
+        <input id="shimmer" type="checkbox" checked />
+        <span>微光</span>
+      </label>
+
+      <div class="palette">
+        <div class="label">色盘</div>
+        <div id="paletteChips" class="chips"></div>
+      </div>
+      <button id="flare" class="btn">光羽跃动</button>
+    </div>
+    <div class="hints">
+      <div>移动指针牵引弧光，点击或空格激起环形波纹，双击快速换色。</div>
+      <div>开启微光搭配拖尾可得到迷雾质感，尝试按下「光羽跃动」叠加闪烁。</div>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
