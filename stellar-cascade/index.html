@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>星弧流霞 | Stellar Cascade</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <header class="hero">
+    <div class="badge">Stellar Cascade</div>
+    <h1>星弧流霞</h1>
+    <p>丝带般的光弧在指尖流转，呼吸、绽放、分形游动，织出一座多彩的梦境花园。</p>
+  </header>
+  <section class="panel glass">
+    <div class="panel-header">
+      <div>
+        <h2>光弧控制</h2>
+        <p>调整数量、流速、扭曲与柔光，点击触发光涟。</p>
+      </div>
+      <button id="burst" class="primary">光涟绽放</button>
+    </div>
+    <div class="controls">
+      <label class="control">
+        <div class="label-row">
+          <span>光弧数量</span>
+          <span id="count-value">160</span>
+        </div>
+        <input type="range" id="count" min="60" max="260" value="160" />
+      </label>
+      <label class="control">
+        <div class="label-row">
+          <span>流动速度</span>
+          <span id="flow-value">0.52</span>
+        </div>
+        <input type="range" id="flow" min="0" max="1" step="0.01" value="0.52" />
+      </label>
+      <label class="control">
+        <div class="label-row">
+          <span>扭曲幅度</span>
+          <span id="warp-value">0.36</span>
+        </div>
+        <input type="range" id="warp" min="0" max="1" step="0.01" value="0.36" />
+      </label>
+      <div class="toggle-row">
+        <label class="toggle">
+          <input type="checkbox" id="glow" checked />
+          <span class="slider"></span>
+          <span class="text">柔光</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="trail" checked />
+          <span class="slider"></span>
+          <span class="text">拖尾</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="pulse" checked />
+          <span class="slider"></span>
+          <span class="text">呼吸</span>
+        </label>
+      </div>
+      <div class="palettes" aria-label="色盘选择">
+        <button class="chip active" data-index="0" style="--c1:#6ddcff;--c2:#7f60f9;--c3:#f7b2ff;"></button>
+        <button class="chip" data-index="1" style="--c1:#ff9a8b;--c2:#ff6a88;--c3:#ff99ac;"></button>
+        <button class="chip" data-index="2" style="--c1:#7af5d3;--c2:#5fd4ff;--c3:#a3b9ff;"></button>
+        <button class="chip" data-index="3" style="--c1:#ffd479;--c2:#ff9f6b;--c3:#ff6f91;"></button>
+      </div>
+    </div>
+    <div class="hint">
+      鼠标/触控牵引光弧，点击或空格触发光涟，双击更换色盘。
+    </div>
+  </section>
+  <div class="floating-orbs">
+    <span class="orb"></span>
+    <span class="orb"></span>
+    <span class="orb"></span>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

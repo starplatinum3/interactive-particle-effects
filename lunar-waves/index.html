@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>月光织潮 - Lunar Waves</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="backdrop"></div>
+  <div class="panel">
+    <div class="panel__header">
+      <div>
+        <p class="eyebrow">Lunar Waves</p>
+        <h1>月光织潮</h1>
+        <p class="muted">丝线般的光羽随指尖与声波般的涟漪交织流动。</p>
+      </div>
+      <div class="badges">
+        <span class="badge">New</span>
+        <span class="badge badge--glow">Interactive</span>
+      </div>
+    </div>
+    <div class="controls">
+      <label class="control">
+        <div>
+          <span class="label">粒子织线</span>
+          <span class="hint" id="count-label">620</span>
+        </div>
+        <input type="range" id="count" min="200" max="1200" value="620" step="20" />
+      </label>
+      <label class="control">
+        <div>
+          <span class="label">潮汐流速</span>
+          <span class="hint" id="flow-label">0.9x</span>
+        </div>
+        <input type="range" id="flow" min="0.2" max="2.0" value="0.9" step="0.1" />
+      </label>
+      <label class="control">
+        <div>
+          <span class="label">织纹扭曲</span>
+          <span class="hint" id="warp-label">0.55</span>
+        </div>
+        <input type="range" id="warp" min="0" max="1" value="0.55" step="0.05" />
+      </label>
+      <label class="control">
+        <div>
+          <span class="label">柔光</span>
+          <span class="hint">薄雾光晕</span>
+        </div>
+        <input type="checkbox" id="glow" checked />
+      </label>
+      <label class="control">
+        <div>
+          <span class="label">拖尾</span>
+          <span class="hint">拉长轨迹</span>
+        </div>
+        <input type="checkbox" id="trails" checked />
+      </label>
+      <div class="palette">
+        <div class="palette__info">
+          <span class="label">色盘</span>
+          <span class="hint">月华 / 晨岚 / 靛影</span>
+        </div>
+        <div class="chips">
+          <button class="chip active" data-index="0"></button>
+          <button class="chip" data-index="1"></button>
+          <button class="chip" data-index="2"></button>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <p>鼠标牵引丝带，点击或按空格激起环形波纹，双击切换色盘。</p>
+    </div>
+  </div>
+  <canvas id="scene"></canvas>
+  <script src="main.js"></script>
+</body>
+</html>
