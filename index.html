@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>主题互动粒子场</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay">
+    <header>
+      <div class="title">
+        <h1>星辰漫游</h1>
+        <p>根据主题打造的交互体验与粒子效果</p>
+      </div>
+      <div class="controls">
+        <label>
+          星尘密度
+          <input id="density" type="range" min="50" max="400" value="200" />
+        </label>
+        <label class="toggle">
+          <input id="meteors" type="checkbox" />
+          <span>流星模式</span>
+        </label>
+        <button id="themeToggle" type="button">切换到黎明</button>
+      </div>
+    </header>
+    <p class="tip">在画布上移动或点击，唤醒更多星尘。</p>
+  </div>
+  <canvas id="scene"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>

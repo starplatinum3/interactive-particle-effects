@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glass Spires | Prism Drift</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="gradient-bg"></div>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <canvas id="scene"></canvas>
+
+  <header class="hero">
+    <div class="title-block">
+      <p class="eyebrow">GLASS SPIRES</p>
+      <h1>Prism Drift Sanctuary</h1>
+      <p class="lede">轻盈的光碎片随指尖与呼吸流动，像悬空的玻璃花园——点击、拖拽、调节滑杆，编织属于你的绮彩轨迹。</p>
+      <div class="cta-row">
+        <button id="reshuffle" class="pill">随机闪烁</button>
+        <button id="burst" class="pill ghost">光波脉动</button>
+      </div>
+      <p class="hint">• 鼠标移动引导光流 | 点击/空格激起光波 | 调整滑杆与色盘探索不同气质。</p>
+    </div>
+
+    <div class="panel glass">
+      <div class="panel-header">
+        <div>
+          <p class="eyebrow">Controls</p>
+          <h3>光碎羽化</h3>
+        </div>
+        <div class="badge">NEW</div>
+      </div>
+
+      <div class="control-grid">
+        <label class="control">
+          <div class="label-row">
+            <span>碎片数量</span>
+            <span id="countValue">240</span>
+          </div>
+          <input type="range" id="count" min="80" max="360" value="240" />
+        </label>
+
+        <label class="control">
+          <div class="label-row">
+            <span>流速 | Flow</span>
+            <span id="flowValue">0.36</span>
+          </div>
+          <input type="range" id="flow" min="0.08" max="0.9" step="0.01" value="0.36" />
+        </label>
+
+        <label class="control">
+          <div class="label-row">
+            <span>扭曲 | Warp</span>
+            <span id="warpValue">0.24</span>
+          </div>
+          <input type="range" id="warp" min="0.05" max="0.6" step="0.01" value="0.24" />
+        </label>
+
+        <label class="control">
+          <div class="label-row">
+            <span>尾迹 | Trails</span>
+            <span id="trailValue">0.08</span>
+          </div>
+          <input type="range" id="trail" min="0.02" max="0.2" step="0.01" value="0.08" />
+        </label>
+
+        <label class="control toggle">
+          <span>柔光</span>
+          <input type="checkbox" id="glow" checked />
+        </label>
+
+        <label class="control toggle">
+          <span>流萤碎光</span>
+          <input type="checkbox" id="spark" checked />
+        </label>
+      </div>
+
+      <div class="palette-row" id="palettes"></div>
+    </div>
+  </header>
+
+  <script src="main.js"></script>
+</body>
+</html>
