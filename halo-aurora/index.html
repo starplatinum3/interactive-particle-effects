@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halo Aurora · 双弧浮晕</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="backdrop"></div>
+  <div class="soft soft-left"></div>
+  <div class="soft soft-right"></div>
+  <canvas id="scene"></canvas>
+
+  <header class="hero">
+    <div class="eyebrow">Halo Aurora</div>
+    <div class="title">双弧浮晕</div>
+    <p class="subtitle">两道错位白弧悬浮在柔和光晕上，左右淡色晕染交织成和谐的环光。</p>
+  </header>
+
+  <section class="panel">
+    <div class="controls">
+      <label class="control">
+        <div class="label">亮度</div>
+        <input id="intensity" type="range" min="0.4" max="1.6" step="0.05" value="1.0" />
+        <span id="intensityVal" class="value">1.0</span>
+      </label>
+      <label class="control">
+        <div class="label">扩散</div>
+        <input id="spread" type="range" min="0.4" max="2.0" step="0.05" value="1.0" />
+        <span id="spreadVal" class="value">1.0</span>
+      </label>
+      <label class="control">
+        <div class="label">脉动</div>
+        <input id="pulse" type="range" min="0" max="2.4" step="0.1" value="1.2" />
+        <span id="pulseVal" class="value">1.2</span>
+      </label>
+      <label class="control">
+        <div class="label">旋转</div>
+        <input id="spin" type="range" min="-1.2" max="1.2" step="0.05" value="0.35" />
+        <span id="spinVal" class="value">0.35</span>
+      </label>
+
+      <label class="toggle">
+        <input id="glow" type="checkbox" checked />
+        <span>柔光</span>
+      </label>
+      <label class="toggle">
+        <input id="grain" type="checkbox" checked />
+        <span>星屑</span>
+      </label>
+
+      <button id="bloom" class="btn">升阶光晕</button>
+    </div>
+    <div class="hints">
+      <div>指针牵引光环重心，点击或空格激起脉冲晕圈，左右有淡色光晕叠加。</div>
+      <div>调整亮度与扩散可获得更柔和或更锐利的弧光，按下「升阶光晕」叠加更亮白弧。</div>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

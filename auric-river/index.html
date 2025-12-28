@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auric River · 流金澜光</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="backdrop"></div>
+  <div class="flare flare-a"></div>
+  <div class="flare flare-b"></div>
+  <div class="flare flare-c"></div>
+  <canvas id="scene"></canvas>
+
+  <header class="hero">
+    <div class="eyebrow">Auric River</div>
+    <div class="title">流金澜光</div>
+    <p class="subtitle">暖金与青蓝交织的流光丝带，随指尖铺陈成层层漩涡与涟漪。</p>
+  </header>
+
+  <section class="panel">
+    <div class="controls">
+      <label class="control">
+        <div class="label">丝带数量</div>
+        <input id="count" type="range" min="140" max="520" value="320" />
+        <span id="countVal" class="value">320</span>
+      </label>
+      <label class="control">
+        <div class="label">流速</div>
+        <input id="flow" type="range" min="0.4" max="2.6" step="0.1" value="1.4" />
+        <span id="flowVal" class="value">1.4</span>
+      </label>
+      <label class="control">
+        <div class="label">扩散</div>
+        <input id="spread" type="range" min="0" max="2.4" step="0.1" value="1.0" />
+        <span id="spreadVal" class="value">1.0</span>
+      </label>
+      <label class="control">
+        <div class="label">律动</div>
+        <input id="pulse" type="range" min="0" max="2.6" step="0.1" value="1.2" />
+        <span id="pulseVal" class="value">1.2</span>
+      </label>
+
+      <label class="toggle">
+        <input id="glow" type="checkbox" checked />
+        <span>柔光</span>
+      </label>
+      <label class="toggle">
+        <input id="trail" type="checkbox" checked />
+        <span>拖尾</span>
+      </label>
+      <label class="toggle">
+        <input id="warp" type="checkbox" checked />
+        <span>折射</span>
+      </label>
+      <label class="toggle">
+        <input id="spark" type="checkbox" checked />
+        <span>碎光</span>
+      </label>
+
+      <div class="palette">
+        <div class="label">色盘</div>
+        <div id="paletteChips" class="chips"></div>
+      </div>
+      <button id="surge" class="btn">澜光涌动</button>
+    </div>
+    <div class="hints">
+      <div>移动指针牵引流光，点击或空格激起波环，双击切换配色。</div>
+      <div>开启折射+碎光可得到细碎的光粒流，按下「澜光涌动」触发炽亮喷涌。</div>
+    </div>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
